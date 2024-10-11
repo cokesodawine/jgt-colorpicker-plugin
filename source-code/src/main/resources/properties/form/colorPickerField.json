@@ -1,0 +1,76 @@
+[
+    {
+      "title": "Color Picker Plugin",
+      "properties": [
+        {
+          "name": "id",
+          "label": "id",
+          "type": "TextField",
+          "required": "True",
+          "regex_validation": "^[a-zA-Z0-9_]+$",
+          "validation_message": "color_picker_invalid_id"
+        },
+        {
+          "name": "label",
+          "label": "Color Picker Label",
+          "type": "TextField",
+          "required": "True",
+          "value": "Color Picker"
+        }
+      ]
+    },
+    {
+      "title": "Advanced Options",
+      "properties": [
+        {
+          "label": "Color Picker Data",
+          "type": "header"
+        },
+        {
+          "name": "value",
+          "label": "Color Picker Value",
+          "type": "TextField"
+        },
+        {
+          "name": "maxlength",
+          "label": "Color Picker Maxlength",
+          "type": "TextField"
+        },
+        {
+          "name": "validator",
+          "label": "Color Picker Validator",
+          "type": "elementselect",
+          "options_ajax": "[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.form.model.FormValidator",
+          "url": "[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions"
+        },
+        {
+          "label": "UI settings",
+          "type": "header"
+        },
+        {
+          "name": "readonly",
+          "label": "readonly",
+          "type": "CheckBox",
+          "value": "False",
+          "options": [
+            {
+              "value": "true",
+              "label": ""
+            }
+          ]
+        },
+        {
+          "name": "readonlyLabel",
+          "label": "readonly label",
+          "type": "CheckBox",
+          "value": "False",
+          "options": [
+            {
+              "value": "true",
+              "label": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
